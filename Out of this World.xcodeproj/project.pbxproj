@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		9942042019DE37F600942EE2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9942041F19DE37F600942EE2 /* main.m */; };
 		9942042319DE37F600942EE2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9942042219DE37F600942EE2 /* AppDelegate.m */; };
-		9942042619DE37F600942EE2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9942042519DE37F600942EE2 /* ViewController.m */; };
 		9942042919DE37F600942EE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9942042719DE37F600942EE2 /* Main.storyboard */; };
 		9942042B19DE37F600942EE2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9942042A19DE37F600942EE2 /* Images.xcassets */; };
 		9942042E19DE37F600942EE2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9942042C19DE37F600942EE2 /* LaunchScreen.xib */; };
 		9942043A19DE37F600942EE2 /* Out_of_this_WorldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9942043919DE37F600942EE2 /* Out_of_this_WorldTests.m */; };
+		9942044519DE38DD00942EE2 /* OWOuterSpaceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9942044419DE38DD00942EE2 /* OWOuterSpaceTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +32,14 @@
 		9942041F19DE37F600942EE2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9942042119DE37F600942EE2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9942042219DE37F600942EE2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9942042419DE37F600942EE2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9942042519DE37F600942EE2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9942042819DE37F600942EE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9942042A19DE37F600942EE2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9942042D19DE37F600942EE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9942043319DE37F600942EE2 /* Out of this WorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Out of this WorldTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9942043819DE37F600942EE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9942043919DE37F600942EE2 /* Out_of_this_WorldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Out_of_this_WorldTests.m; sourceTree = "<group>"; };
+		9942044319DE38DD00942EE2 /* OWOuterSpaceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OWOuterSpaceTableViewController.h; path = ../OWOuterSpaceTableViewController.h; sourceTree = "<group>"; };
+		9942044419DE38DD00942EE2 /* OWOuterSpaceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OWOuterSpaceTableViewController.m; path = ../OWOuterSpaceTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +83,9 @@
 			children = (
 				9942042119DE37F600942EE2 /* AppDelegate.h */,
 				9942042219DE37F600942EE2 /* AppDelegate.m */,
-				9942042419DE37F600942EE2 /* ViewController.h */,
-				9942042519DE37F600942EE2 /* ViewController.m */,
 				9942042719DE37F600942EE2 /* Main.storyboard */,
+				9942044319DE38DD00942EE2 /* OWOuterSpaceTableViewController.h */,
+				9942044419DE38DD00942EE2 /* OWOuterSpaceTableViewController.m */,
 				9942042A19DE37F600942EE2 /* Images.xcassets */,
 				9942042C19DE37F600942EE2 /* LaunchScreen.xib */,
 				9942041D19DE37F600942EE2 /* Supporting Files */,
@@ -163,6 +163,7 @@
 		9942041219DE37F600942EE2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = MTL;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Matthew Linaberry";
 				TargetAttributes = {
@@ -219,7 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9942042619DE37F600942EE2 /* ViewController.m in Sources */,
+				9942044519DE38DD00942EE2 /* OWOuterSpaceTableViewController.m in Sources */,
 				9942042319DE37F600942EE2 /* AppDelegate.m in Sources */,
 				9942042019DE37F600942EE2 /* main.m in Sources */,
 			);
