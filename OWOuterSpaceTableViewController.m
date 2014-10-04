@@ -7,7 +7,8 @@
 //
 
 #import "OWOuterSpaceTableViewController.h"
-
+#import "OWSpaceObject.h"
+#import "AstronomicalData.h"
 @interface OWOuterSpaceTableViewController ()
 
 @end
@@ -22,25 +23,13 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
     self.planets = [[NSMutableArray alloc] init];
-    NSString *planet1 = @"Mercury";
-    NSString *planet2 = @"Venus";
-    NSString *planet3 = @"Earth";
-    NSString *planet4 = @"Mars";
-    NSString *planet5 = @"Jupiter";
-    NSString *planet6 = @"Saturn";
-    NSString *planet7 = @"Uranus";
-    NSString *planet8 = @"Neptune";
-    
-    [self.planets addObject:planet1];
-        [self.planets addObject:planet2];
-        [self.planets addObject:planet3];
-        [self.planets addObject:planet4];
-        [self.planets addObject:planet5];
-        [self.planets addObject:planet6];
-        [self.planets addObject:planet7];
-        [self.planets addObject:planet8];
+    for (NSMutableDictionary *planetData in [AstronomicalData allKnownPlanets])
+    {
+        NSString *imageName = [NSString stringWithFormat:@"%@.jpg", planetData[PLANET_NAME]];
+        OWSpaceObject *planet = [[OWSpaceObject alloc] initWithData:planetData andImage:[UIImage imageNamed:imageName]];
+        [self.planets addObject:planet];
+    }
     
 //    NSMutableDictionary *myDictionary = [[NSMutableDictionary alloc] init];
 //    NSString *firstColor = @"red";
@@ -84,16 +73,14 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.textLabel.text = [self.planets objectAtIndex:indexPath.row];
+    OWSpaceObject *planet = self.planets[indexPath.row];
+    cell.textLabel.text = planet.name;
+    cell.detailTextLabel.text = planet.nickname;
+    cell.imageView.image = planet.spaceImage;
     
-    if (indexPath.section == 0)
-    {
-        cell.backgroundColor = [UIColor redColor];
-    }
-    else
-    {
-        cell.backgroundColor = [UIColor blueColor];
-    }
+    cell.backgroundColor = [UIColor clearColor];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.detailTextLabel.textColor = [UIColor colorWithWhite:0.5 alpha:1.0];
     return cell;
 }
 
