@@ -9,6 +9,7 @@
 #import "OWOuterSpaceTableViewController.h"
 #import "OWSpaceObject.h"
 #import "AstronomicalData.h"
+#import "OWSpaceImageViewController.h"
 @interface OWOuterSpaceTableViewController ()
 
 @end
@@ -119,14 +120,28 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    // the sender is the object that gets tapped!
+    if ([sender isKindOfClass:[UITableViewCell class]])
+    {
+        // did a tableview cell cause the navigation event?
+        if ([segue.destinationViewController isKindOfClass:[OWSpaceImageViewController class]])
+        {
+            // are we going to the space image view controller?
+            OWSpaceImageViewController *nextViewController = segue.destinationViewController;
+            NSIndexPath *path = [self.tableView indexPathForCell:sender];  // return the index path of the cell that called the segue!
+            OWSpaceObject *selectedObject = self.planets[path.row];
+            
+            nextViewController.spaceObject = selectedObject;
+        }
+    }
 }
-*/
+
 
 @end
