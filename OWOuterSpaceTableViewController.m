@@ -120,6 +120,11 @@
 }
 */
 
+#pragma UITableView delegates
+-(void) tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"accessory button is working! %li", indexPath.row);
+}
 
 #pragma mark - Navigation
 

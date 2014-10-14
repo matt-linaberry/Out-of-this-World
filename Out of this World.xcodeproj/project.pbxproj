@@ -27,6 +27,7 @@
 		99E0B50B19E06F0900D3F8C4 /* OWSpaceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E0B50A19E06F0900D3F8C4 /* OWSpaceObject.m */; };
 		99E0B54B19E08DED00D3F8C4 /* OWSpaceImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E0B54A19E08DED00D3F8C4 /* OWSpaceImageViewController.m */; };
 		99ED9EF919DF952B00232EF2 /* AstronomicalData.m in Sources */ = {isa = PBXBuildFile; fileRef = 99ED9EF819DF952B00232EF2 /* AstronomicalData.m */; };
+		A30896D619EDC01200811552 /* OWSpaceDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A30896D519EDC01200811552 /* OWSpaceDataViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		99E0B54A19E08DED00D3F8C4 /* OWSpaceImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWSpaceImageViewController.m; sourceTree = "<group>"; };
 		99ED9EF719DF952B00232EF2 /* AstronomicalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AstronomicalData.h; sourceTree = "<group>"; };
 		99ED9EF819DF952B00232EF2 /* AstronomicalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AstronomicalData.m; sourceTree = "<group>"; };
+		A30896D419EDC01200811552 /* OWSpaceDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWSpaceDataViewController.h; sourceTree = "<group>"; };
+		A30896D519EDC01200811552 /* OWSpaceDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWSpaceDataViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				9942042119DE37F600942EE2 /* AppDelegate.h */,
 				9942042219DE37F600942EE2 /* AppDelegate.m */,
 				9942042719DE37F600942EE2 /* Main.storyboard */,
+				A30896D419EDC01200811552 /* OWSpaceDataViewController.h */,
+				A30896D519EDC01200811552 /* OWSpaceDataViewController.m */,
 				9942044319DE38DD00942EE2 /* OWOuterSpaceTableViewController.h */,
 				9942044419DE38DD00942EE2 /* OWOuterSpaceTableViewController.m */,
 				9942042A19DE37F600942EE2 /* Images.xcassets */,
@@ -280,6 +285,7 @@
 				9942042319DE37F600942EE2 /* AppDelegate.m in Sources */,
 				9942042019DE37F600942EE2 /* main.m in Sources */,
 				99ED9EF919DF952B00232EF2 /* AstronomicalData.m in Sources */,
+				A30896D619EDC01200811552 /* OWSpaceDataViewController.m in Sources */,
 				99E0B54B19E08DED00D3F8C4 /* OWSpaceImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
