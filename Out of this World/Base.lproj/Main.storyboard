@@ -43,6 +43,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Planets" id="V0B-gq-Bhv"/>
+                    <connections>
+                        <segue destination="v7L-aV-2Hr" kind="push" identifier="push to space data" id="KPq-yV-ehz"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UCe-mT-3Ca" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -123,6 +126,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="C9v-vr-135"/>
                     <connections>
                         <outlet property="tableView" destination="aVM-fh-6OI" id="3G1-H6-ItM"/>
                     </connections>

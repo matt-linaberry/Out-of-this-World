@@ -10,6 +10,7 @@
 #import "OWSpaceObject.h"
 #import "AstronomicalData.h"
 #import "OWSpaceImageViewController.h"
+#import "OWSpaceDataViewController.h"
 @interface OWOuterSpaceTableViewController ()
 
 @end
@@ -123,7 +124,7 @@
 #pragma UITableView delegates
 -(void) tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"accessory button is working! %li", indexPath.row);
+    [self performSegueWithIdentifier:@"push to space data" sender:indexPath];
 }
 
 #pragma mark - Navigation
@@ -144,6 +145,17 @@
             OWSpaceObject *selectedObject = self.planets[path.row];
             
             nextViewController.spaceObject = selectedObject;
+        }
+    }
+    
+    if ([sender isKindOfClass:[NSIndexPath class]])
+    {
+        if ([segue.destinationViewController isKindOfClass:[OWSpaceDataViewController class]])
+        {
+            OWSpaceDataViewController *targetViewController = segue.destinationViewController;
+            NSIndexPath *path = sender;
+            OWSpaceObject *selectedObject = self.planets[path.row];
+            targetViewController.spaceObject = selectedObject;
         }
     }
 }
