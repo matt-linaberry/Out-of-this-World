@@ -14,6 +14,7 @@
 		9942042E19DE37F600942EE2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9942042C19DE37F600942EE2 /* LaunchScreen.xib */; };
 		9942043A19DE37F600942EE2 /* Out_of_this_WorldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9942043919DE37F600942EE2 /* Out_of_this_WorldTests.m */; };
 		9942044519DE38DD00942EE2 /* OWOuterSpaceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9942044419DE38DD00942EE2 /* OWOuterSpaceTableViewController.m */; };
+		99C4C0C419F4807C00A6921F /* OWAddSpaceObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C4C0C319F4807C00A6921F /* OWAddSpaceObjectViewController.m */; };
 		99E0B4FF19E06ED600D3F8C4 /* Mars.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 99E0B4F519E06ED600D3F8C4 /* Mars.jpg */; };
 		99E0B50019E06ED600D3F8C4 /* Earth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 99E0B4F619E06ED600D3F8C4 /* Earth.jpg */; };
 		99E0B50119E06ED600D3F8C4 /* Mercury.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 99E0B4F719E06ED600D3F8C4 /* Mercury.jpg */; };
@@ -54,6 +55,8 @@
 		9942043919DE37F600942EE2 /* Out_of_this_WorldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Out_of_this_WorldTests.m; sourceTree = "<group>"; };
 		9942044319DE38DD00942EE2 /* OWOuterSpaceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OWOuterSpaceTableViewController.h; path = ../OWOuterSpaceTableViewController.h; sourceTree = "<group>"; };
 		9942044419DE38DD00942EE2 /* OWOuterSpaceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OWOuterSpaceTableViewController.m; path = ../OWOuterSpaceTableViewController.m; sourceTree = "<group>"; };
+		99C4C0C219F4807C00A6921F /* OWAddSpaceObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWAddSpaceObjectViewController.h; sourceTree = "<group>"; };
+		99C4C0C319F4807C00A6921F /* OWAddSpaceObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWAddSpaceObjectViewController.m; sourceTree = "<group>"; };
 		99E0B4F519E06ED600D3F8C4 /* Mars.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mars.jpg; sourceTree = "<group>"; };
 		99E0B4F619E06ED600D3F8C4 /* Earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Earth.jpg; sourceTree = "<group>"; };
 		99E0B4F719E06ED600D3F8C4 /* Mercury.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mercury.jpg; sourceTree = "<group>"; };
@@ -120,6 +123,8 @@
 				9942042119DE37F600942EE2 /* AppDelegate.h */,
 				9942042219DE37F600942EE2 /* AppDelegate.m */,
 				9942042719DE37F600942EE2 /* Main.storyboard */,
+				99C4C0C219F4807C00A6921F /* OWAddSpaceObjectViewController.h */,
+				99C4C0C319F4807C00A6921F /* OWAddSpaceObjectViewController.m */,
 				A30896D419EDC01200811552 /* OWSpaceDataViewController.h */,
 				A30896D519EDC01200811552 /* OWSpaceDataViewController.m */,
 				9942044319DE38DD00942EE2 /* OWOuterSpaceTableViewController.h */,
@@ -280,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99C4C0C419F4807C00A6921F /* OWAddSpaceObjectViewController.m in Sources */,
 				9942044519DE38DD00942EE2 /* OWOuterSpaceTableViewController.m in Sources */,
 				99E0B50B19E06F0900D3F8C4 /* OWSpaceObject.m in Sources */,
 				9942042319DE37F600942EE2 /* AppDelegate.m in Sources */,
