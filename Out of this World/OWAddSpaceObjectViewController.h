@@ -7,8 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OWSpaceObject.h"
+@protocol OWAddSpaceObjectViewControllerDelegate <NSObject>
+@required
+
+- (void) addSpaceObject:(OWSpaceObject *)spaceObject;
+- (void) didCancel;
+
+@end
 
 @interface OWAddSpaceObjectViewController : UIViewController
+@property (weak, nonatomic) id <OWAddSpaceObjectViewControllerDelegate> delegate;
 @property (strong, nonatomic) IBOutlet UITextField *nameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *nickNameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *diameterTextField;

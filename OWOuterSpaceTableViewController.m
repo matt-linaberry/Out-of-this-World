@@ -54,6 +54,25 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - OWAddSpaceObjectViewContrtollerDelegate
+-(void) didCancel
+{
+    NSLog(@"didCancel was just called!");
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void) addSpaceObject:(OWSpaceObject *)spaceObject
+{
+    if (!self.addedSpaceObjects)
+    {
+        self.addedSpaceObjects = [[NSMutableArray alloc] init];
+    }
+    [self.addedSpaceObjects addObject:spaceObject];
+    NSLog(@"addSpaceObject just called!");
+    [self dismissViewControllerAnimated:YES completion:nil];
+
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -175,6 +194,10 @@
             OWSpaceObject *selectedObject = self.planets[path.row];
             targetViewController.spaceObject = selectedObject;
         }
+    }
+    if ([segue.destinationViewController isKindOfClass:[OWAddSpaceObjectViewController class]]) {
+        OWAddSpaceObjectViewController *addSpaceObjectVC = segue.destinationViewController;
+        addSpaceObjectVC.delegate = self;
     }
 }
 
