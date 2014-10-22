@@ -16,7 +16,25 @@
 @end
 
 @implementation OWOuterSpaceTableViewController
+#pragma mark - lazy instantiation
 
+-(NSMutableArray *)planets
+{
+    if (!_planets)
+    {
+        _planets = [[NSMutableArray alloc] init];
+    }
+    return _planets;
+}
+
+- (NSMutableArray *)addedSpaceObjects
+{
+    if (!_addedSpaceObjects)
+    {
+        _addedSpaceObjects = [[NSMutableArray alloc] init];
+    }
+    return _addedSpaceObjects;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -25,7 +43,6 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.planets = [[NSMutableArray alloc] init];
     for (NSMutableDictionary *planetData in [AstronomicalData allKnownPlanets])
     {
         NSString *imageName = [NSString stringWithFormat:@"%@.jpg", planetData[PLANET_NAME]];
@@ -63,14 +80,10 @@
 
 - (void) addSpaceObject:(OWSpaceObject *)spaceObject
 {
-    if (!self.addedSpaceObjects)
-    {
-        self.addedSpaceObjects = [[NSMutableArray alloc] init];
-    }
     [self.addedSpaceObjects addObject:spaceObject];
     NSLog(@"addSpaceObject just called!");
     [self dismissViewControllerAnimated:YES completion:nil];
-
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -107,7 +120,11 @@
     if (indexPath.section == 1)
     {
         // use new space object to customize our cell...
+        OWSpaceObject *planet = [self.addedSpaceObjects objectAtIndex:indexPath.row];
+        cell.textLabel.text = planet.name;
+        cell.detailTextLabel.text = planet.nickname;
         
+        cell.imageView.image = planet.spaceImage;
     }
     else {
         OWSpaceObject *planet = self.planets[indexPath.row];
@@ -179,7 +196,16 @@
             // are we going to the space image view controller?
             OWSpaceImageViewController *nextViewController = segue.destinationViewController;
             NSIndexPath *path = [self.tableView indexPathForCell:sender];  // return the index path of the cell that called the segue!
-            OWSpaceObject *selectedObject = self.planets[path.row];
+            OWSpaceObject *selectedObject;
+            
+            if (path.section == 0)
+            {
+                selectedObject = self.planets[path.row];
+            }
+            else if (path.section == 1)
+            {
+                selectedObject = self.addedSpaceObjects[path.row];
+            }
             
             nextViewController.spaceObject = selectedObject;
         }
@@ -191,7 +217,15 @@
         {
             OWSpaceDataViewController *targetViewController = segue.destinationViewController;
             NSIndexPath *path = sender;
-            OWSpaceObject *selectedObject = self.planets[path.row];
+            OWSpaceObject *selectedObject;
+            if (path.section == 0)
+            {
+                selectedObject = self.planets[path.row];
+            }
+            else if (path.section == 1)
+            {
+                selectedObject = self.addedSpaceObjects[path.row];
+            }
             targetViewController.spaceObject = selectedObject;
         }
     }
